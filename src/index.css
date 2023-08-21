@@ -1,0 +1,16 @@
+body {
+  background-color: #111;
+  color: white;
+  font-family: system-ui;
+  padding: 2%;
+  margin: 20%
+}
+
+h1 {
+  margin: 40px 0;
+  text-align: center;
+}
+
+form > * {
+  margin: 20px;
+}
