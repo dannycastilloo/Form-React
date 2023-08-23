@@ -10,7 +10,7 @@ export const FormComponent = () => {
         password: ''
     }
 
-    const {formState, email, password, onInputChange } = useForm(initialForm)
+    const { formState, email, password, onInputChange } = useForm(initialForm)
 
     const onSubmit = () => {
         event.preventDefault()
@@ -18,20 +18,20 @@ export const FormComponent = () => {
     }
 
     useEffect(() => {
-      focusRef.current.focus()
+        focusRef.current.focus()
     }, [])
-    
+
     return (
         <form onSubmit={onSubmit}>
             <div className="mb-3">
-                <label htmlFor="email" className="form-label">Email address</label>
-                <input ref={focusRef} type="email" className="form-control" placeholder="example@gmail.com" name="email" value={email} onChange={onInputChange}></input>
+                <input ref={focusRef} type="email" className="form-control" placeholder="Email" name="email" value={email} onChange={onInputChange}></input>
             </div>
             <div className="mb-3">
-                <label htmlFor="password" className="form-label">Password</label>
-                <input type="password" className="form-control" name="password" value={password} onChange={onInputChange}></input>
+                <input type="password" className="form-control" placeholder="Password" name="password" value={password} onChange={onInputChange}></input>
             </div>
-            <button type="submit" className="btn btn-primary">Submit</button>
+            <div className="btn">
+                <button type="submit" className="btn btn-primary">Submit</button>
+            </div>
         </form>
     )
 }
