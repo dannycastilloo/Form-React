@@ -22,16 +22,19 @@ export const FormComponent = () => {
     }, [])
 
     return (
-        <form onSubmit={onSubmit}>
-            <div className="mb-3">
-                <input ref={focusRef} type="email" className="form-control" placeholder="Email" name="email" value={email} onChange={onInputChange}></input>
-            </div>
-            <div className="mb-3">
-                <input type="password" className="form-control" placeholder="Password" name="password" value={password} onChange={onInputChange}></input>
-            </div>
-            <div className="btn">
-                <button type="submit" className="btn btn-primary">Submit</button>
-            </div>
-        </form>
+        <>
+            <h1>Welcome!</h1>
+            <form onSubmit={onSubmit}>
+                <div className="mb-3">
+                    <input ref={focusRef} type="email" className="form-control" placeholder="Email" name="email" value={email} onChange={onInputChange}></input>
+                </div>
+                <div className="mb-3">
+                    <input type="password" className="form-control" placeholder="Password" name="password" value={password} onChange={onInputChange}></input>
+                </div>
+                <div className="btn">
+                    <button type="submit" className="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </>
     )
 }
